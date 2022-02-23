@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/Zaid 
-RUN git clone https://github.com/ITZ-ZAID/Robot /root/Zaid
-WORKDIR /root/Zaid
+# Copy Python Requirements to /root/Verixa
+RUN git clone https://github.com/Sumit9969/VERIXA-ROBOT /root/Verixa
+WORKDIR /root/Verixa
 
-#Copy config file to /root/Zaid/Zaid
-COPY ./Zaid/sample_config.py ./Zaid/config.py* /root/Zaid/Zaid/
+#Copy config file to /root/Verixa/Verixa
+COPY ./Verixa/sample_config.py ./Verixa/config.py* /root/Verixa/Verixa/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","Zaid"]
+CMD ["python3","-m","Verixa"]
