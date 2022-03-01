@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import Zaid.modules.sql.users_sql as sql
+import Verixa.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from Zaid import (
+from Verixa import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -32,9 +32,9 @@ from Zaid import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Zaid.modules import ALL_MODULES
-from Zaid.modules.helper_funcs.chat_status import is_user_admin
-from Zaid.modules.helper_funcs.misc import paginate_modules
+from Verixa.modules import ALL_MODULES
+from Verixa.modules.helper_funcs.chat_status import is_user_admin
+from Verixa.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-😈 HI'm Zaid, An anime - Themed advanced telegram Group management with lots of features.
+😈 HI'm Verixa, An anime - Themed advanced telegram Group management with lots of features.
 ───────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -95,14 +95,14 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴇʟꜱᴇ ᴜ ɢᴀʏ🔥", url="t.me/Zaid2_Robot?startgroup=true"),
+            text="ᴀᴅᴅ ᴍᴇ ᴇʟꜱᴇ ᴜ ɢᴀʏ🔥", url="t.me/Verixa_Robot?startgroup=true"),
     ],
      [
         InlineKeyboardButton(text="ʙᴀꜱɪᴄ ɢᴜɪᴅᴇ ", callback_data="emiko_"),
      ],
      [  
-        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ⚒️", url="https://t.me/Superior_Support"),
-        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ 📢", url="https://t.me/Superior_Bots"),
+        InlineKeyboardButton(text="ꜱᴜᴘᴘᴏʀᴛ ⚒️", url="https://t.me/SECRET_SOCIETY012"),
+        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇꜱ 📢", url="https://t.me/DEMON_CREATORS"),
     ], 
 
     [
@@ -117,7 +117,7 @@ Click on the button bellow to get description about specifics command."""
 EMI_IMG = "https://telegra.ph/file/be24bbabbe0ec30dff489.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Timesisnotwaiting \
+ You can support the project by contacting @Simple_Mundaa \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -132,7 +132,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Zaid.modules." + module_name)
+    imported_module = importlib.import_module("Verixa.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -233,7 +233,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Zaid robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi I'm Verixa robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -364,7 +364,7 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm Zaid, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm Verixa, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -386,7 +386,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="Developers 🎁", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Donate 💝", url=f"t.me/godfatherakkii"),
+                    InlineKeyboardButton(text="Donate 💝", url=f"t.me/Simple_Mundaa"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_back"),
@@ -412,7 +412,7 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Zaid now ready to manage your group."
+            "\nCongragulations, Verixa now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -429,13 +429,13 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_support":
         query.message.edit_text(
             text="*✨ support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Zaid.",
+            "\nJoin My Support Group/Channel for see or report a problem on verixa.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/Superior_Suppport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/Superior_bots"),
+                    InlineKeyboardButton(text="Support", url="t.me/SECRET_SOCIETY012"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/DEMON_CREATORS"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
@@ -454,8 +454,8 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Zaid", url="t.me/Timesisnotwaiting"),
-                    InlineKeyboardButton(text="Aman", url="t.me/Shubhanshutya"),
+                    InlineKeyboardButton(text="DEVELOPER", url="t.me/Simple_Mundaa"),
+                    InlineKeyboardButton(text="BOT QUEEN", url="t.me/Cute_Shezhadi012"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="emiko_"),
