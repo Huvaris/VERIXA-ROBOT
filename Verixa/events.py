@@ -7,12 +7,12 @@ from pathlib import Path
 from telethon import events
 
 from pymongo import MongoClient
-from Zaid import MONGO_DB_URI
-from Zaid import telethn
+from Verixa import MONGO_DB_URI
+from Verixa import telethn
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["ZaidRobot"]
+db = client["VerixaRobot"]
 gbanned = db.gban
 
 def register(**args):
@@ -145,7 +145,7 @@ def bot(**args):
     return decorator
 
 
-def Zaid(**args):
+def Verixa(**args):
     pattern = args.get("pattern", None)
     disable_edited = args.get("disable_edited", False)
     ignore_unsafe = args.get("ignore_unsafe", False)
