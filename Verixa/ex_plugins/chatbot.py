@@ -1,4 +1,4 @@
-from Zaid.mongo import client as db_x
+from Verixa.mongo import client as db_x
 
 lydia = db_x["CHATBOT"]
 
