@@ -22,22 +22,22 @@ from pyrogram.types import (CallbackQuery,
                             InputTextMessageContent)
 from search_engine_parser import GoogleSearch
 
-from Zaid import (
+from Verixa import (
     DEV_USERS,
     EVENT_LOGS, 
     BOT_USERNAME,
     ubot2,
 )
-from Zaid import pbot as app 
-from Zaid import arq
-from Zaid.services.keyboard import Ikb
-from Zaid.utils.pluginhelper import convert_seconds_to_minutes as time_convert, fetch
-from Zaid.services.tasks import _get_tasks_text, all_tasks, rm_task
-from Zaid.services.types import InlineQueryResultCachedDocument
-from Zaid.modules.info import get_chat_info, get_user_info
-from Zaid.modules.music import download_youtube_audio
-from Zaid.utils.functions import test_speedtest
-from Zaid.utils.pastebin import paste
+from Verixa import pbot as app 
+from Verixa import arq
+from Verixa.services.keyboard import Ikb
+from Verixa.utils.pluginhelper import convert_seconds_to_minutes as time_convert, fetch
+from Verixa.services.tasks import _get_tasks_text, all_tasks, rm_task
+from Verixa.services.types import InlineQueryResultCachedDocument
+from Verixa.modules.info import get_chat_info, get_user_info
+from Verixa.modules.music import download_youtube_audio
+from Verixa.utils.functions import test_speedtest
+from Verixa.utils.pastebin import paste
 
 MESSAGE_DUMP_CHAT = EVENT_LOGS
 
@@ -115,21 +115,21 @@ async def alive_function(answers):
     bot_state = "Dead" if not await app.get_me() else "Alive"
     ubot_state = "Dead" if not await ubot2.get_me() else "Alive"
     buttons.add(
-        InlineKeyboardButton("Main bot", url="https://t.me/EmiexRobot"),
+        InlineKeyboardButton("Main bot", url="https://t.me/VERIXA_ROBOT"),
         InlineKeyboardButton(
             "Go Inline!", switch_inline_query_current_chat=""
         ),
     )
 
     msg = f"""
-**[Robot ❤️](https://t.me/Superior_bots):**
+**[Robot ❤️](https://t.me/DEMON_CREATORS):**
 **MainBot:** `{bot_state}`
 **UserBot:** `{ubot_state}`
 **Python:** `{pyver.split()[0]}`
 **Pyrogram:** `{pyrover}`
 **MongoDB:** `{mongover}`
 **Platform:** `{sys.platform}`
-**Profiles:** [BOT](t.me/{BOT_USERNAME}) | [UBOT](t.me/Timesisnotwaiting)
+**Support:** [Female Owner](t.me/{BOT_USERNAME}) | [Owner](t.me/Simple_mundaa)
 """
     answers.append(
         InlineQueryResultArticle(
