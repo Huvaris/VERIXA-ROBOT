@@ -1,6 +1,6 @@
 """
 MIT License
-Copyright (c) 2021 TheHamkerCat
+Copyright (c) 2021 Verixa Robot
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -32,9 +32,9 @@ import speedtest
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from pyrogram.types import Message
 
-from Zaid import aiohttpsession as aiosession
-from Zaid.ex_plugins.dbfunctions import start_restart_stage
-from Zaid.utils.http import get, post
+from Verixa import aiohttpsession as aiosession
+from Verixa.ex_plugins.dbfunctions import start_restart_stage
+from Verixa.utils.http import get, post
 
 
 async def restart(m: Message):
