@@ -4,15 +4,15 @@ from random import randint
 from time import time
 
 import aiohttp
-from Zaid import aiohttpsession 
+from Verixa import aiohttpsession 
 from aiohttp import ClientSession
 
 from google_trans_new import google_translator
 from Python_ARQ import ARQ
 from search_engine_parser import GoogleSearch
 
-from Zaid import BOT_ID, OWNER_ID, ARQ_API_URL, ARQ_API_KEY
-from Zaid import pbot
+from Verixa import BOT_ID, OWNER_ID, ARQ_API_URL, ARQ_API_KEY
+from Verixa import pbot
 
 ARQ_API = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
 ARQ_API_KEY = "WZQUBA-PFAZQJ-OMIINH-MIVHYM-ARQ"
