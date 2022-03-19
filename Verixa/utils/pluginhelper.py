@@ -13,8 +13,8 @@ from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Chat, Message, User
 
-from Zaid import OWNER_ID, SUPPORT_CHAT
-from Zaid import pbot
+from Verixa import OWNER_ID, SUPPORT_CHAT
+from Verixa import pbot
 
 
 def get_user(message: Message, text: str) -> [int, str, None]:
@@ -328,7 +328,7 @@ def admins_only(func: Callable) -> Coroutine:
     return wrapper
 
 
-# @Mr_Dark_Prince
+# @Simple_Mundaa
 def capture_err(func):
     @wraps(func)
     async def capture(client, message, *args, **kwargs):
@@ -356,7 +356,7 @@ def capture_err(func):
     return capture
 
 
-# Special credits to TheHamkerCat
+# Special credits to SumitYadav
 
 
 async def member_permissions(chat_id, user_id):
