@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from Zaid import TIGERS, WOLVES, dispatcher
-from Zaid.modules.disable import DisableAbleCommandHandler
-from Zaid.modules.helper_funcs.chat_status import (
+from Verixa import TIGERS, WOLVES, dispatcher
+from Verixa.modules.disable import DisableAbleCommandHandler
+from Verixa.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -14,16 +14,16 @@ from Zaid.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from Zaid.modules.helper_funcs.extraction import (
+from Verixa.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from Zaid.modules.helper_funcs.filters import CustomFilters
-from Zaid.modules.helper_funcs.misc import split_message
-from Zaid.modules.helper_funcs.string_handling import split_quotes
-from Zaid.modules.log_channel import loggable
-from Zaid.modules.sql import warns_sql as sql
+from Verixa.modules.helper_funcs.filters import CustomFilters
+from Verixa.modules.helper_funcs.misc import split_message
+from Verixa.modules.helper_funcs.string_handling import split_quotes
+from Verixa.modules.log_channel import loggable
+from Verixa.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,7 +45,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from Zaid.modules.sql.approve_sql import is_approved
+from Verixa.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
