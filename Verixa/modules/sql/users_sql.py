@@ -1,7 +1,7 @@
 import threading
 
-from Zaid import dispatcher
-from Zaid.modules.sql import BASE, SESSION
+from Verixa import dispatcher
+from Verixa.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
