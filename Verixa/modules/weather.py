@@ -8,10 +8,10 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from Zaid import *
+from Verixa import *
 
-from Zaid import telethn as tbot
-from Zaid.events import register
+from Verixa import telethn as tbot
+from Verixa.events import register
 
 
 async def is_register_admin(chat, user):
