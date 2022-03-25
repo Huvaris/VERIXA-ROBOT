@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Numeric, Boolean
-from Zaid.modules.sql import BASE, SESSION
+from Verixa.modules.sql import BASE, SESSION
 
 
 class forceSubscribe(BASE):
