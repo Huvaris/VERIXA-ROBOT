@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, distinct, func, Integer
 
-from Zaid.modules.sql import BASE, SESSION
+from Verixa.modules.sql import BASE, SESSION
 
 
 class StickersFilters(BASE):
