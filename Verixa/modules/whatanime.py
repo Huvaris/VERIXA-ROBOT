@@ -16,7 +16,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import is_image, is_video
 
-from Zaid.events import register as tomori
+from Verixa.events import register as tomori
 
 
 
