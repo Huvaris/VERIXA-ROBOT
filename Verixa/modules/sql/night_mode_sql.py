@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, String, UnicodeText
-from Zaid.modules.sql import BASE, SESSION
+from Verixa.modules.sql import BASE, SESSION
 
 
 class Nightmode(BASE):
