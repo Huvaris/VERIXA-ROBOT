@@ -20,8 +20,8 @@ SOFTWARE.
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Zaid import pbot as app
-from Zaid.utils.errors import capture_err
+from Verixa import pbot as app
+from Verixa.utils.errors import capture_err
 
 __mod_name__ = "Webshot​"
 
