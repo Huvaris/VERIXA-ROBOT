@@ -1,4 +1,4 @@
-from Zaid.modules.disable import (
+from Verixa.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
@@ -9,11 +9,11 @@ from telegram.ext import (
     InlineQueryHandler,
 )
 from telegram.ext.filters import BaseFilter
-from Zaid import dispatcher as d, LOGGER
+from Verixa import dispatcher as d, LOGGER
 from typing import Optional, Union, List
 
 
-class ZaidHandler:
+class VerixaHandler:
     def __init__(self, d):
         self._dispatcher = d
 
