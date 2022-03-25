@@ -5,9 +5,9 @@ import zipfile
 from telethon import types
 from telethon.tl import functions
 
-from Zaid import TEMP_DOWNLOAD_DIRECTORY
-from Zaid import telethn as client
-from Zaid.events import register
+from Verixa import TEMP_DOWNLOAD_DIRECTORY
+from Verixa import telethn as client
+from Verixa.events import register
 
 
 async def is_register_admin(chat, user):
