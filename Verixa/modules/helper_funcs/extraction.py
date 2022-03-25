@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from Zaid import LOGGER
-from Zaid.modules.users import get_user_id
+from Verixa import LOGGER
+from Verixa.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
