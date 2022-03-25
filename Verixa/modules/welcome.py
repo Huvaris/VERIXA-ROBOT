@@ -4,8 +4,8 @@ import re
 import time
 from functools import partial
 from io import BytesIO
-import Zaid.modules.sql.welcome_sql as sql
-from Zaid import (
+import Verixa.modules.sql.welcome_sql as sql
+from Verixa import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -15,19 +15,19 @@ from Zaid import (
     LOGGER,
     dispatcher,
 )
-from Zaid.modules.helper_funcs.chat_status import (
+from Verixa.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from Zaid.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from Zaid.modules.helper_funcs.msg_types import get_welcome_type
-from Zaid.modules.helper_funcs.handlers import MessageHandlerChecker
-from Zaid.modules.helper_funcs.string_handling import (
+from Verixa.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Verixa.modules.helper_funcs.msg_types import get_welcome_type
+from Verixa.modules.helper_funcs.handlers import MessageHandlerChecker
+from Verixa.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from Zaid.modules.log_channel import loggable
-from Zaid.modules.sql.global_bans_sql import is_user_gbanned
+from Verixa.modules.log_channel import loggable
+from Verixa.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -203,14 +203,14 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"My King just joined the chat"
+                    f"My King and queen just joined the chat"
                 )
                 continue
 
             # Welcome Devs
             if new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! The Prince just joined!",
+                    "Whoa! The Prince and Priness just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
