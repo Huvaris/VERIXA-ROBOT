@@ -13,7 +13,7 @@
 
 from sqlalchemy import Column, String
 
-from Zaid.modules.sql import BASE, SESSION
+from Verixa.modules.sql import BASE, SESSION
 
 
 class Nsfwatch(BASE):
