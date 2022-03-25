@@ -1,5 +1,5 @@
-from Zaid.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
-from Zaid import DRAGONS
+from Verixa.modules.helper_funcs.telethn import IMMUNE_USERS, telethn
+from Verixa import DRAGONS
 from telethon.tl.types import ChannelParticipantsAdmins
 
 
